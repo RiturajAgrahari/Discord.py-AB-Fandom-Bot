@@ -67,116 +67,116 @@ async def on_message(message):
 
 @client.tree.command(name="wiki-food", description="Select a food item to check its detail!")
 async def food(interaction: discord.Interaction, item: Literal[DATA['FOOD']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 
 @client.tree.command(name="wiki-beverage", description="Select a beverage item to check its detail!")
 async def beverage(interaction: discord.Interaction, item: Literal[DATA['BEVERAGES']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 
 @client.tree.command(name="wiki-tier-1-body-armor", description="Select a armor to check its detail!")
 async def tierOneArmor(interaction: discord.Interaction, item: Literal[DATA['Tier 1 Body Armor']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 
 @client.tree.command(name="wiki-tier-2-body-armor", description="Select a armor to check its detail!")
 async def tierTwoArmor(interaction: discord.Interaction, item: Literal[DATA['Tier 2 Body Armor']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-tier-3-body-armor", description="Select a armor to check its detail!")
 async def TierThreeArmor(interaction: discord.Interaction, item: Literal[DATA['Tier 3 Body Armor']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-tier-4-body-armor", description="Select a armor to check its detail!")
 async def TierFourArmor(interaction: discord.Interaction, item: Literal[DATA['Tier 4 Body Armor']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-tier-5-body-armor", description="Select a armor to check its detail!")
 async def TierFiveArmor(interaction: discord.Interaction, item: Literal[DATA['Tier 5 Body Armor']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-tier-6-body-armor", description="Select a armor to check its detail!")
 async def tierSixArmor(interaction: discord.Interaction, item: Literal[DATA['Tier 6 Body Armor']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-tier-1-helmet", description="Select a helmet to check its detail!")
 async def tierOneHelmet(interaction: discord.Interaction, item: Literal[DATA['Tier 1 Helmets']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-tier-2-helmet", description="Select a helmet to check its detail!")
 async def tierTwoHelmet(interaction: discord.Interaction, item: Literal[DATA['Tier 2 Helmets']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 @client.tree.command(name="wiki-tier-3-helmet", description="Select a helmet to check its detail!")
 async def tierThreeHelmet(interaction: discord.Interaction, item: Literal[DATA['Tier 3 Helmets']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 @client.tree.command(name="wiki-tier-4-helmet", description="Select a helmet to check its detail!")
 async def tierFourHelmet(interaction: discord.Interaction, item: Literal[DATA['Tier 4 Helmets']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 @client.tree.command(name="wiki-tier-5-helmet", description="Select a helmet to check its detail!")
 async def tierFiveHelmet(interaction: discord.Interaction, item: Literal[DATA['Tier 5 Helmets']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 @client.tree.command(name="wiki-tier-6-helmet", description="Select a helmet to check its detail!")
 async def tierSixHelmet(interaction: discord.Interaction, item: Literal[DATA['Tier 6 Helmets']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-throwables", description="Select a throwable to check its detail!")
 async def throwables(interaction: discord.Interaction, item: Literal[DATA['THROWABLES']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-headsets", description="Select a headset to check its detail!")
 async def headsets(interaction: discord.Interaction, item: Literal[DATA['HEADSETS']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-masks", description="Select a mask to check its detail!")
 async def masks(interaction: discord.Interaction, item: Literal[DATA['MASKS']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-chest-rigs", description="Select a chest rig to check its detail!")
 async def chestRigs(interaction: discord.Interaction, item: Literal[DATA['CHEST RIGS']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-armored-rigs", description="Select a armored rig to check its detail!")
 async def armoredRigs(interaction: discord.Interaction, item: Literal[DATA['ARMORED RIGS']]):
-    await interaction.response.defer(ephemeral=True)
+    await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
-    await interaction.followup.send(embed=embed, ephemeral=True)
+    await interaction.followup.send(embed=embed, ephemeral=False)
 
 
 
