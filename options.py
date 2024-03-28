@@ -8,6 +8,7 @@ DATA = {}
 categories = ['Provisions', 'Gear']
 # categories = ['Medicine', 'Provisions', 'Gear', 'Gunsmith']
 
+
 def get_category():
     for category in categories:
         search = fandom.search(category, results=1)
