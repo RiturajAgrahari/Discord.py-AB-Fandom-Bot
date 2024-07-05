@@ -1,11 +1,11 @@
 import fandom
 from bs4 import BeautifulSoup
-from typing import Literal, Union
 
 fandom.set_wiki('arena-breakout')
 
 DATA = {}
-categories = ['Provisions', 'Gear']
+categories = ['Provisions', 'Gear', "Gunsmith"]
+# categories = ["Storage"]
 # categories = ['Medicine', 'Provisions', 'Gear', 'Gunsmith']
 
 
@@ -46,10 +46,10 @@ def get_category():
                 Tup = tuple(detail)
                 DATA[f'{heading.text}'] = Tup
 
-
     # print(f"-----------------------DATA----------------------")
     # for keys, value in DATA.items():
     #     print(f"{keys}: {value}\n")
+
 
 get_category()
 

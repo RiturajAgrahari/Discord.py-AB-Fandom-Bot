@@ -18,6 +18,7 @@ class UseMysql:
             user=self.user,
             password=self.password,
             database=self.database,
+            auth_plugin="mysql_native_password"
         )
 
         self.mydb = mydb

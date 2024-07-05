@@ -5,6 +5,7 @@ fandom.set_wiki('arena-breakout')
 
 CACHE = {}
 
+
 async def get_content(PAGE):
     search = fandom.search(PAGE, results=1)
 
@@ -14,8 +15,10 @@ async def get_content(PAGE):
     page = fandom.page(title=page_name)
     page2 = fandom.page(pageid=page_no)
     content = page.content
+    # print(content)
     image = page.images
     return content, image
+
 
 async def get_average(title):
     if title in CACHE.keys():
@@ -32,7 +35,7 @@ async def get_average(title):
         description=content['content'],
         color=discord.Color.yellow()
     )
-    print(image)
+    # print(image)
     embed.set_thumbnail(url=image[0])
 
     if infobox[2].lower() == 'statistics':

@@ -13,7 +13,7 @@ from database import UseMysql
 load_dotenv()
 
 MAIN_GUILD_ID = int(os.getenv("MAIN_SERVER_ID"))
-TEST_GUILD_ID = int(os.getenv("TEST_SERVER_ID"))
+# TEST_GUILD_ID = int(os.getenv("TEST_SERVER_ID"))
 
 dbms = UseMysql()
 
@@ -30,10 +30,10 @@ class MyClient(discord.Client):
         await self.tree.sync(guild=first_guild)
 
         # Set up command tree for the second guild
-        second_guild = discord.Object(id=TEST_GUILD_ID)
-        if second_guild.id != MAIN_GUILD_ID:
-            self.tree.copy_global_to(guild=second_guild)
-            await self.tree.sync(guild=second_guild)
+        # second_guild = discord.Object(id=TEST_GUILD_ID)
+        # if second_guild.id != MAIN_GUILD_ID:
+        #     self.tree.copy_global_to(guild=second_guild)
+        #     await self.tree.sync(guild=second_guild)
 
 
 intents = discord.Intents.default()
@@ -220,6 +220,174 @@ async def armoredRigs(interaction: discord.Interaction, item: Literal[DATA['ARMO
     await interaction.response.defer(ephemeral=False)
     embed = await get_average(item)
     await interaction.followup.send(embed=embed, ephemeral=False)
+
+
+# @client.tree.command(name="wiki-attachments", description="Weapon Attachments")
+# async def attachments(interaction: discord.Interaction, item: Literal[DATA['Attachments']]):
+#     await dbms.bot_uses()
+#     await interaction.response.defer(ephemeral=False)
+#     # embed = await get_average(item)
+#     await interaction.followup.send("Response", ephemeral=True)
+
+
+@client.tree.command(name="wiki-ammunition--338", description="Select an ammunition to check its detail!")
+async def ammo_dot338(interaction: discord.Interaction, item: Literal[DATA['.338']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition--45", description="Select an ammunition to check its detail!")
+async def ammo_dot45(interaction: discord.Interaction, item: Literal[DATA['.45']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition--44", description="Select an ammunition to check its detail!")
+async def ammo_dot44(interaction: discord.Interaction, item: Literal[DATA['.44']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-12-7x99mm", description="Select an ammunition to check its detail!")
+async def ammo_12_7x99mm(interaction: discord.Interaction, item: Literal[DATA['12.7x99mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-5-45x39mm", description="Select an ammunition to check its detail!")
+async def ammo_5_45x39mm(interaction: discord.Interaction, item: Literal[DATA['5.45x39mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-9x39mm", description="Select an ammunition to check its detail!")
+async def ammo_9x39mm(interaction: discord.Interaction, item: Literal[DATA['9x39mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-5-7x28mm", description="Select an ammunition to check its detail!")
+async def ammo_5_7x28mm(interaction: discord.Interaction, item: Literal[DATA['5.7×28mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-7-62x51mm", description="Select an ammunition to check its detail!")
+async def ammo_12x70mm(interaction: discord.Interaction, item: Literal[DATA['7.62x51mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-9x19mm", description="Select an ammunition to check its detail!")
+async def ammo_9x19mm(interaction: discord.Interaction, item: Literal[DATA['9x19mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-5-56x45mm", description="Select an ammunition to check its detail!")
+async def ammo_5_56x45mm(interaction: discord.Interaction, item: Literal[DATA['5.56x45mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-7-62x54mm", description="Select an ammunition to check its detail!")
+async def ammo_7_62x54mm(interaction: discord.Interaction, item: Literal[DATA['7.62x54mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-ammunition-7-62x39mm", description="Select an ammunition to check its detail!")
+async def ammo_7_62x39mm(interaction: discord.Interaction, item: Literal[DATA['7.62x39mm']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-sniper-rifles", description="Select weapons fall in this category to check its detail!")
+async def sniper_rifles(interaction: discord.Interaction, item: Literal[DATA['Sniper Rifles']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-marksman-rifles", description="Select weapons fall in this category to check its detail!")
+async def marksman_rifles(interaction: discord.Interaction, item: Literal[DATA['Marksman Rifles']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-carbines", description="Select weapons fall in this category to check its detail!")
+async def carbines(interaction: discord.Interaction, item: Literal[DATA['Carbines']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-machine-gun", description="Select weapons fall in this category to check its detail!")
+async def machine_gun(interaction: discord.Interaction, item: Literal[DATA['Machine Gun']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-shotguns", description="Select weapons fall in this category to check its detail!")
+async def shotguns(interaction: discord.Interaction, item: Literal[DATA['Shotguns']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-assault-rifles", description="Select weapons fall in this category to check its detail!")
+async def assault_rifles(interaction: discord.Interaction, item: Literal[DATA['Assault Rifles']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-submachine-guns", description="Select weapons fall in this category to check its detail!")
+async def submachine_guns(interaction: discord.Interaction, item: Literal[DATA["Submachine Guns/PDW's"]]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
+
+
+@client.tree.command(name="wiki-handguns", description="Select weapons fall in this category to check its detail!")
+async def handguns(interaction: discord.Interaction, item: Literal[DATA['Handguns']]):
+    await dbms.bot_uses()
+    await interaction.response.defer(ephemeral=False)
+    embed = await get_average(item)
+    await interaction.followup.send(embed=embed)
 
 
 async def get_avatar_url(interaction):
