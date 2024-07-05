@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 from discord import app_commands
 
 from basic import get_average
-from options import get_category, DATA
+from options import DATA
+from embeds import help_embed
 from database import UseMysql
 
 load_dotenv()
@@ -68,6 +69,11 @@ async def on_message(message):
         if channel == 'rpg':
             print('success')
 
+
+@client.tree.command(name="help", description="Get help related to available commands!")
+async def help(interaction: discord.Interaction):
+    embed = await help_embed()
+    await interaction.response.send_message(embed=embed, ephemeral=False)
 
 @client.tree.command(name="wiki-food", description="Select a food item to check its detail!")
 async def food(interaction: discord.Interaction, item: Literal[DATA['FOOD']]):
